@@ -196,6 +196,7 @@ gulp.task("extrajs", function() {
 // Build files to be used individually
 gulp.task("lib", function() {
   var src = ['control','featureanimation','filter','format','geom','interaction','layer','overlay','render','source','style','util','utils'];
+  var promises = [];
   for (var i=0; i<src.length; i++) {
     gulp.src("./src/"+src[i]+"/*.js")
       .pipe(transform())
